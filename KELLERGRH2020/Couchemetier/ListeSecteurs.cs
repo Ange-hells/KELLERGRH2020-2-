@@ -19,14 +19,14 @@ namespace KELLERGRH2020
             return lesSecteurs;
         }
 
-        public static Secteur getSecteurByCode(int unCode)
-        {
-            return lesSecteurs.FirstOrDefault(r => r.Code == unCode);
-        }
+		public static Secteur getSecteurByCode(int unCode)
+		{
+			return ListeSecteurs.getSecteurs().FirstOrDefault(r => r.Code == unCode);
+		}
 
-        //public static Secteur getSecteurByLibelle(string unLibelle)
-        //{
-        //    return // TODO
-        //}
-    }
+		public static Secteur getSecteurByLibelle(string unLibelle)
+		{
+			return ListeSecteurs.getSecteurs().FirstOrDefault(r => r.Libelle == unLibelle);
+		}
+	}
 }

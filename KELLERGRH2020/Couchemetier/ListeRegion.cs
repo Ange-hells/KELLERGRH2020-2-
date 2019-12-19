@@ -19,12 +19,12 @@ namespace KELLERGRH2020
             return lesRegions;
         }
 
-		//public static Region getRegionByLibelle(string unLibelle)
-		//{
-		//	//return  //TO DO
-  //      }
+		public static Region getRegionByLibelle(string unLibelle)
+		{
+			return ListeRegion.getRegions().FirstOrDefault(r => r.Libelle == unLibelle);
+		}
 
-        public static Region getRegionByCode(int unCode)
+		public static Region getRegionByCode(int unCode)
         {
             return lesRegions.FirstOrDefault(r => r.Code == unCode);
         }

@@ -48,7 +48,7 @@ namespace KELLERGRH2020
 					Collaborateur leCollab = lesCollaborateurs.FirstOrDefault(r => r.Id = idCourant);
 					while (continuer && int.Parse(jeu[0].ToString()) == idCourant)
 					{
-						Poste unPoste = new Poste(DateTime.Parse(jeu[1].ToString()), ListeRole.getRoleById(int.Parse(jeu[5].ToString())));
+						//Poste unPoste = new Poste(DateTime.Parse(jeu[1].ToString()), ListeRole.getRoleById(int.Parse(jeu[5].ToString())));
 						DateTime nul;
 						if (jeu[2].ToString() == "")
 						{

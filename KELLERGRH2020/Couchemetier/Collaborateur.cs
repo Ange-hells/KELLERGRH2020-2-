@@ -15,9 +15,10 @@ namespace KELLERGRH2020
         private string leCp;
         private string laVille;
         private DateTime laDateEmbauche;
+		private List<Poste> lesPostes;
 
 
-        public Collaborateur()
+		public Collaborateur()
         {
         }
 
@@ -30,6 +31,7 @@ namespace KELLERGRH2020
 			leCp = unCp;
 			laVille = uneVille;
 			laDateEmbauche = uneDateEmbauche;
+			lesPostes = new List<Poste>();
 		}
 
 
@@ -83,5 +85,14 @@ namespace KELLERGRH2020
             { laDateEmbauche = value; }
         }
 
-    }
+		public List<Poste> Postes
+		{
+			get { return lesPostes; }
+			set
+			{
+				lesPostes = value;
+			}
+		}
+
+	}
 }

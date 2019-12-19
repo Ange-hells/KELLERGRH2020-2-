@@ -31,12 +31,24 @@ namespace KELLERGRH2020
 			return ListeCollaborateurs.getCollaborateurs().FirstOrDefault(r => r.Id == unId);
 		}
 
-        public static List<Collaborateur> getCollaborateurByNomPrenom(string unNom, string unPrenom)
-        {
-            // TODO 
-        }
+		public static List<Collaborateur> getCollaborateurByNomPrenom(string unNom, string unPrenom)
+		{
+			List<Collaborateur> laListe;
+			laListe = new List<Collaborateur>();
+
+			var req = from col in lesCollaborateurs
+					  where col.Nom == unNom && col.Prenom == unPrenom
+					  select col;
+
+			foreach (Collaborateur col in req)
+			{
+				laListe.Add(col);
+			}
+
+			return laListe;
+		}
 
 
 
-    }
+	}
 }
