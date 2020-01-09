@@ -36,10 +36,10 @@ namespace KELLERGRH2020
 
 
 
-        public string Id
+        public int Id
         {
-            get { return lId.ToString(); }
-            set { lId = int.Parse(value); }
+            get { return lId; }
+            set { lId = value; }
         }
 
 

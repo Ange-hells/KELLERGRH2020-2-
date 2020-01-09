@@ -45,7 +45,7 @@ namespace KELLERGRH2020
 				while (continuer)
 				{
 					int idCourant = int.Parse(jeu[0].ToString());
-					Collaborateur leCollab = lesCollaborateurs.FirstOrDefault(r => r.Id = idCourant);
+					Collaborateur leCollab = lesCollaborateurs.FirstOrDefault(r => r.Id == idCourant);
 					while (continuer && int.Parse(jeu[0].ToString()) == idCourant)
 					{
 						//Poste unPoste = new Poste(DateTime.Parse(jeu[1].ToString()), ListeRole.getRoleById(int.Parse(jeu[5].ToString())));
@@ -67,7 +67,7 @@ namespace KELLERGRH2020
 						Poste unPoste = new Poste(DateTime.Parse(jeu[1].ToString()), nul, ListeRole.getRoleById(int.Parse(jeu[5].ToString())), ListeRegion.getRegionByCode(int.Parse(jeu[3].ToString())), ListeSecteurs.getSecteurByCode(int.Parse(jeu[4].ToString())));
 
 
-						leCollab.Post.Add(unPoste);
+						leCollab.Postes.Add(unPoste);
 						continuer = jeu.Read();
 					}
 				}

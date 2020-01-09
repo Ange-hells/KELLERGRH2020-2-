@@ -26,7 +26,7 @@ namespace KELLERGRH2020
 		}
 
 
-		public static Collaborateur getCollaborateurById(string unId)
+		public static Collaborateur getCollaborateurById(int unId)
         {
 			return ListeCollaborateurs.getCollaborateurs().FirstOrDefault(r => r.Id == unId);
 		}
